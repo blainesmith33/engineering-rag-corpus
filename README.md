@@ -6,4 +6,9 @@ The first registered source is `azerothcore_wiki_official`, pinned at commit `7d
 
 `/run/media/deck/blAIne-476GB-SAM/blAIne/rag-data/engineering-rag/sources/official_docs/azerothcore_wiki_official/`
 
-No normalization, chunks, embeddings, vectors, or indexes are part of this repository.
+The first bounded normalization/chunk-definition pilot is implemented by
+`scripts/azerothcore_wiki_chunking.py` and specified in
+`docs/azerothcore-wiki-normalization-chunking.md`. Generated sample artifacts
+remain external under `experiments/azerothcore_wiki_chunking_v1/` in the data
+root. The pilot never creates a production vector collection or triggers
+full-source ingestion.

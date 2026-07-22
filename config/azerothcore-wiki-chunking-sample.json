@@ -1,0 +1,60 @@
+{
+  "experiment_id": "azerothcore_wiki_chunking_v1",
+  "source_id": "azerothcore_wiki_official",
+  "source_commit": "7d540fc7e683c3bf34a2f465789f1b3df268b609",
+  "selection_method": "Manual, bounded selection after a read-only structural scan of the pinned docs tree; only these files are normalized and chunked.",
+  "files": [
+    {
+      "relative_path": "docs/cmake-options.md",
+      "reasons": ["CMake/build-oriented page", "YAML front matter", "redirect_from alias", "heading-based configuration reference", "fenced code"]
+    },
+    {
+      "relative_path": "docs/config-overrides-with-env-var.md",
+      "reasons": ["configuration-oriented page", "multiple fenced code blocks", "code must remain attached to explanatory text"]
+    },
+    {
+      "relative_path": "docs/creating-accounts.md",
+      "reasons": ["English half of a translation pair", "YAML front matter", "Liquid includes", "command examples", "table", "SQL code"]
+    },
+    {
+      "relative_path": "docs/es/creating-accounts.md",
+      "reasons": ["Spanish half of a translation pair", "language isolation and translation relationship", "Liquid includes", "same code examples as English without deduplication"]
+    },
+    {
+      "relative_path": "docs/gm-commands.md",
+      "reasons": ["oversized command/reference page", "709-row command table", "command-family boundaries", "raw HTML line breaks inside technical table cells", "YAML redirect alias"]
+    },
+    {
+      "relative_path": "docs/creature_immunities.md",
+      "reasons": ["database/SQL-oriented schema reference", "substantial technical tables", "bitmask lookup", "Back-to navigation"]
+    },
+    {
+      "relative_path": "docs/how-to-restart-and-debug.md",
+      "reasons": ["standard heading-based documentation", "troubleshooting/debugging", "fenced code", "configuration example", "meaningful inline raw HTML"]
+    },
+    {
+      "relative_path": "docs/updates_include.md",
+      "reasons": ["three repeated Back-to navigation links", "database table", "test that removed navigation remains metadata"]
+    },
+    {
+      "relative_path": "docs/how-to-debug.md",
+      "reasons": ["very small placeholder page", "must be excluded with an explicit reason and produce no chunks"]
+    },
+    {
+      "relative_path": "docs/database-squash.md",
+      "reasons": ["small but useful database page", "YAML front matter", "approved Liquid include", "tests retaining a complete technical fact"]
+    },
+    {
+      "relative_path": "docs/wiki-alerts-and-callouts.md",
+      "reasons": ["Liquid includes with parameters", "Liquid raw guards", "raw HTML technical examples", "callouts", "small table", "duplicate-include risk"]
+    },
+    {
+      "relative_path": "docs/requirements.md",
+      "reasons": ["approved Liquid help and important includes", "meaningful database-version requirement", "raw HTML", "repeated installation-navigation site chrome"]
+    }
+  ],
+  "coverage_notes": {
+    "redirect_page": "This snapshot uses Jekyll redirect_from front matter rather than redirect_to-only pages. docs/cmake-options.md and other selected pages exercise the real redirect mechanism: the old route is recorded as an alias on the semantic destination, not emitted as a separate document.",
+    "bounded_scope": "12 of 912 docs/**/*.md files are processed. Include files are read only when referenced by these pages and never become standalone documents."
+  }
+}

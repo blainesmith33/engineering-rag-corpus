@@ -1,0 +1,227 @@
+[
+  {
+    "question_id": "q001",
+    "question": "What exact worldserver command creates an account?",
+    "expected_source_path": "docs/creating-accounts.md",
+    "expected_heading_path": ["Creating Accounts", "To create an account"],
+    "expected_supporting_text": "account create <user> <pass>",
+    "answerable": true,
+    "notes": "Exact command lookup; English content."
+  },
+  {
+    "question_id": "q002",
+    "question": "How do I set an account's GM level for all realms?",
+    "expected_source_path": "docs/creating-accounts.md",
+    "expected_heading_path": ["Creating Accounts", "To set your account security level"],
+    "expected_supporting_text": "account set gmlevel admin 3 -1",
+    "answerable": true,
+    "notes": "Command example plus included note explaining -1."
+  },
+  {
+    "question_id": "q003",
+    "question": "¿Qué comando crea una cuenta desde la consola de Worldserver?",
+    "expected_source_path": "docs/es/creating-accounts.md",
+    "expected_heading_path": ["Creación de cuentas", "Para crear una cuenta"],
+    "expected_supporting_text": "account create <user> <pass>",
+    "answerable": true,
+    "notes": "Spanish-specific retrieval and translation isolation."
+  },
+  {
+    "question_id": "q004",
+    "question": "¿Por qué hay que volver a iniciar sesión después de cambiar el nivel de seguridad?",
+    "expected_source_path": "docs/es/creating-accounts.md",
+    "expected_heading_path": ["Creación de cuentas", "Para establecer el nivel de seguridad de tu cuenta"],
+    "expected_supporting_text": "necesitas volver a iniciar sesión para que el nivel de seguridad se actualice correctamente",
+    "answerable": true,
+    "notes": "Spanish question requiring resolved note.html include."
+  },
+  {
+    "question_id": "q005",
+    "question": "What SQL raises an account to SEC_CONSOLE security level 4?",
+    "expected_source_path": "docs/creating-accounts.md",
+    "expected_heading_path": ["Creating Accounts", "Higher security level"],
+    "expected_supporting_text": "SET `gmlevel` = 4 WHERE `username` = '<user>';",
+    "answerable": true,
+    "notes": "Database/SQL and code example lookup."
+  },
+  {
+    "question_id": "q006",
+    "question": "In what precedence order are environment variables, .conf values, and core defaults applied?",
+    "expected_source_path": "docs/config-overrides-with-env-var.md",
+    "expected_heading_path": ["Config Overrides with Env Var"],
+    "expected_supporting_text": "1. Environment variables\n2. .conf file\n3. Base values defined in the core",
+    "answerable": true,
+    "notes": "Configuration lookup requiring introductory heading context."
+  },
+  {
+    "question_id": "q007",
+    "question": "What environment variable is generated from LogDB.Opt.ClearTime?",
+    "expected_source_path": "docs/config-overrides-with-env-var.md",
+    "expected_heading_path": ["Config Overrides with Env Var"],
+    "expected_supporting_text": "LogDB.Opt.ClearTime => LOG_DB_OPT_CLEAR_TIME",
+    "answerable": true,
+    "notes": "Exact configuration identifier lookup."
+  },
+  {
+    "question_id": "q008",
+    "question": "Show the Unix example for overriding the world server port to 8080.",
+    "expected_source_path": "docs/config-overrides-with-env-var.md",
+    "expected_heading_path": ["Config Overrides with Env Var", "Usage example"],
+    "expected_supporting_text": "AC_WORLD_SERVER_PORT=8080 ./worldserver",
+    "answerable": true,
+    "notes": "Code example question."
+  },
+  {
+    "question_id": "q009",
+    "question": "Which CMake flag disables performance optimizations for debugging?",
+    "expected_source_path": "docs/cmake-options.md",
+    "expected_heading_path": ["CMake Options", "PERFORMANCE"],
+    "expected_supporting_text": "-DENABLE_EXTRAS=0",
+    "answerable": true,
+    "notes": "CMake/build lookup through a redirect-bearing document."
+  },
+  {
+    "question_id": "q010",
+    "question": "Which two CMake options disable the core and scripts precompiled headers separately?",
+    "expected_source_path": "docs/cmake-options.md",
+    "expected_heading_path": ["CMake Options", "Precompiled Headers (PCH)"],
+    "expected_supporting_text": "-DUSE_COREPCH=0\n-DUSE_SCRIPTPCH=0",
+    "answerable": true,
+    "notes": "CMake fenced-code boundary."
+  },
+  {
+    "question_id": "q011",
+    "question": "What compilation types are required for meaningful GDB crash reports?",
+    "expected_source_path": "docs/how-to-restart-and-debug.md",
+    "expected_heading_path": ["How to restart and debug", "The `startup-scripts` Engine", "Configuration and Debugging"],
+    "expected_supporting_text": "Debug` or `RelWithDebInfo",
+    "answerable": true,
+    "notes": "Troubleshooting answer in meaningful raw HTML."
+  },
+  {
+    "question_id": "q012",
+    "question": "Where does the startup-scripts engine write GDB crashdump files?",
+    "expected_source_path": "docs/how-to-restart-and-debug.md",
+    "expected_heading_path": ["How to restart and debug", "The `startup-scripts` Engine", "Configuration and Debugging"],
+    "expected_supporting_text": "apps/startup-scripts/logs/crashes/",
+    "answerable": true,
+    "notes": "Troubleshooting path lookup."
+  },
+  {
+    "question_id": "q013",
+    "question": "What acore.sh command starts authserver using the new engine?",
+    "expected_source_path": "docs/how-to-restart-and-debug.md",
+    "expected_heading_path": ["How to restart and debug", "The `startup-scripts` Engine", "Basic Usage"],
+    "expected_supporting_text": "./acore.sh run-authserver",
+    "answerable": true,
+    "notes": "Exact command lookup in a fenced block."
+  },
+  {
+    "question_id": "q014",
+    "question": "In creature_immunities, what numeric value is DISPEL_ALL_MASK for magic, curse, disease, and poison?",
+    "expected_source_path": "docs/creature_immunities.md",
+    "expected_heading_path": ["creature_immunities", "DispelTypeMask"],
+    "expected_supporting_text": "2 | 4 | 8 | 16 = 30",
+    "answerable": true,
+    "notes": "Database table and heading context."
+  },
+  {
+    "question_id": "q015",
+    "question": "Which MechanicsMask hex value represents GRIP?",
+    "expected_source_path": "docs/creature_immunities.md",
+    "expected_heading_path": ["creature_immunities", "MechanicsMask"],
+    "expected_supporting_text": "0x20 | GRIP",
+    "answerable": true,
+    "notes": "Substantial table row lookup; header must remain with row."
+  },
+  {
+    "question_id": "q016",
+    "question": "What does the path field mean in the updates_include table?",
+    "expected_source_path": "docs/updates_include.md",
+    "expected_heading_path": ["updates_include", "Description of the fields", "path"],
+    "expected_supporting_text": "The directory to include in updates.",
+    "answerable": true,
+    "notes": "Question requiring full heading hierarchy after repeated Back-to removal."
+  },
+  {
+    "question_id": "q017",
+    "question": "Why are AzerothCore database base files squashed?",
+    "expected_source_path": "docs/database-squash.md",
+    "expected_heading_path": ["Database Squash", "Introduction"],
+    "expected_supporting_text": "a clean install of the server is done quicker",
+    "answerable": true,
+    "notes": "Short useful page must remain retrievable."
+  },
+  {
+    "question_id": "q018",
+    "question": "As of September 19 2024, which MariaDB and MySQL versions are no longer supported?",
+    "expected_source_path": "docs/requirements.md",
+    "expected_heading_path": ["Requirements"],
+    "expected_supporting_text": "MariaDB and MySQL versions 5.7 and 8.1 are no longer supported",
+    "answerable": true,
+    "notes": "Requires the resolved important.html template."
+  },
+  {
+    "question_id": "q019",
+    "question": "What support links are included under Requirements Help?",
+    "expected_source_path": "docs/requirements.md",
+    "expected_heading_path": ["Requirements", "Help"],
+    "expected_supporting_text": "FAQ\nCommon Errors\nHow to ask for help",
+    "answerable": true,
+    "notes": "Requires an approved include containing meaningful HTML links."
+  },
+  {
+    "question_id": "q020",
+    "question": "What document is addressed by the old /CMake-options wiki route?",
+    "expected_source_path": "docs/cmake-options.md",
+    "expected_heading_path": ["CMake Options"],
+    "expected_supporting_text": "CMake Options",
+    "answerable": true,
+    "notes": "Redirect alias lookup."
+  },
+  {
+    "question_id": "q021",
+    "question": "What is the exact .damage command syntax?",
+    "expected_source_path": "docs/gm-commands.md",
+    "expected_heading_path": ["GM Commands"],
+    "expected_supporting_text": ".damage $damage_amount [$school [$spellid]]",
+    "answerable": true,
+    "notes": "Exact command lookup from oversized reference table."
+  },
+  {
+    "question_id": "q022",
+    "question": "Which security level and optional arguments does .debug boundary use?",
+    "expected_source_path": "docs/gm-commands.md",
+    "expected_heading_path": ["GM Commands"],
+    "expected_supporting_text": "debug boundary | 3 | `.debug boundary [duration] [fill] [z]`",
+    "answerable": true,
+    "notes": "Command row must keep command, security, syntax, and description together."
+  },
+  {
+    "question_id": "q023",
+    "question": "What does the chatfilter list GM command display and what security level does it require?",
+    "expected_source_path": "docs/gm-commands.md",
+    "expected_heading_path": ["GM Commands"],
+    "expected_supporting_text": "chatfilter list | 2 | `.chatfilter list` | List all entries from the `chat_filter` table.",
+    "answerable": true,
+    "notes": "Table-based exact identifier lookup."
+  },
+  {
+    "question_id": "q024",
+    "question": "Which callout type renders a danger callout with bold danger text?",
+    "expected_source_path": "docs/wiki-alerts-and-callouts.md",
+    "expected_heading_path": ["Wiki Alerts and Callouts", "Callouts"],
+    "expected_supporting_text": "This is a <b>danger</b> callout.",
+    "answerable": true,
+    "notes": "Liquid include parameters and meaningful raw HTML."
+  },
+  {
+    "question_id": "q025",
+    "question": "How do I configure PostgreSQL as the AzerothCore authentication database in this sample?",
+    "expected_source_path": null,
+    "expected_heading_path": [],
+    "expected_supporting_text": null,
+    "answerable": false,
+    "notes": "Intentionally unanswerable; PostgreSQL setup is absent from the bounded sample."
+  }
+]
