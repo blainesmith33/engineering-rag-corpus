@@ -12,3 +12,10 @@ The first bounded normalization/chunk-definition pilot is implemented by
 remain external under `experiments/azerothcore_wiki_chunking_v1/` in the data
 root. The pilot never creates a production vector collection or triggers
 full-source ingestion.
+
+The bounded evidence-sufficiency and abstention calibration is implemented by
+`scripts/azerothcore_wiki_abstention.py` and specified in
+`docs/azerothcore-wiki-abstention.md`. It uses the already approved A/B hybrid
+sample, keeps calibration and locked-holdout evaluation separate, and returns
+`supported`, `insufficient_evidence`, or `no_relevant_evidence` without
+generating an answer. Its thresholds are experimental and pilot-build-specific.
