@@ -1,0 +1,48 @@
+{
+  "$schema": "https://engineering-rag.local/schemas/source-record.schema.json",
+  "schema_version": "1.0.0",
+  "source_id": "azerothcore_wiki_official",
+  "source_name": "Official AzerothCore Wiki",
+  "provenance_class": "official_docs",
+  "authority_level": "official_project",
+  "upstream_project": "AzerothCore Wiki",
+  "upstream_url": "https://github.com/azerothcore/wiki.git",
+  "upstream_remote": "https://github.com/azerothcore/wiki.git",
+  "branch": "master",
+  "commit": "7d540fc7e683c3bf34a2f465789f1b3df268b609",
+  "tag": null,
+  "nearest_tag": "v2.2.0",
+  "nearest_tag_distance": 1878,
+  "acquisition_date": "2026-07-21T19:19:13-07:00",
+  "license": {
+    "spdx_id": "MIT",
+    "name": "MIT License",
+    "path": ".github/LICENSE",
+    "copyright_notice": "Copyright (c) 2017 Drassil.org",
+    "status": "recorded"
+  },
+  "local_snapshot_path": "/run/media/deck/blAIne-476GB-SAM/blAIne/rag-data/engineering-rag/sources/official_docs/azerothcore_wiki_official/snapshot",
+  "primary_documentation_directory": "docs",
+  "file_count": 1054,
+  "byte_count": 18696345,
+  "inventory_hash": "sha256:b85d91f93b97537a0e3c3eab1070d6030740d75dcdc24b5fcb8ac2974df93d27",
+  "source_status": "acquired_verified_pinned",
+  "inclusion_status": "proposed_not_processed",
+  "expected_document_types": [
+    "GitHub-Flavored Markdown",
+    "YAML front matter",
+    "Liquid/Jekyll include syntax",
+    "embedded HTML",
+    "Markdown tables",
+    "English documentation",
+    "Spanish documentation"
+  ],
+  "proposed_parser": "gfm_markdown_with_yaml_front_matter_liquid_includes_html_and_language_metadata",
+  "proposed_chunking_profile": "heading_hierarchy_v1_proposed_not_executed",
+  "notes": [
+    "The snapshot is a full clone detached at the exact commit while retaining origin and all fetched branches/tags.",
+    "There is no exact tag at HEAD; v2.2.0 is the nearest reachable tag, 1878 commits behind HEAD.",
+    "Primary ingestion candidates are the 912 Markdown files beneath docs/; English and Spanish pages require explicit language metadata.",
+    "No normalization, chunking, embedding, vectorization, indexing, dependency installation, or site generation was performed."
+  ]
+}

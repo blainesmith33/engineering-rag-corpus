@@ -1,0 +1,66 @@
+{
+  "$schema": "https://engineering-rag.local/schemas/acquisition-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "source_id": "azerothcore_wiki_official",
+  "acquisition_date": "2026-07-21T19:19:13-07:00",
+  "acquisition_method": "git_clone_full",
+  "acquisition_command": "git clone --no-single-branch https://github.com/azerothcore/wiki.git <external-snapshot-path>",
+  "upstream_remote": "https://github.com/azerothcore/wiki.git",
+  "remote_fetch_refspec": "+refs/heads/*:refs/remotes/origin/*",
+  "resolved_branch": "master",
+  "resolved_commit": "7d540fc7e683c3bf34a2f465789f1b3df268b609",
+  "commit_author_date": "2026-07-21T13:42:43+02:00",
+  "commit_committer_date": "2026-07-21T13:42:43+02:00",
+  "exact_tag": null,
+  "nearest_tag": "v2.2.0",
+  "nearest_tag_distance": 1878,
+  "tag_count": 14,
+  "commit_count_all_refs": 2004,
+  "snapshot_checkout_state": "detached_head_at_resolved_commit",
+  "snapshot_path": "/run/media/deck/blAIne-476GB-SAM/blAIne/rag-data/engineering-rag/sources/official_docs/azerothcore_wiki_official/snapshot",
+  "inventory": {
+    "scope": "All regular worktree files recursively, excluding .git metadata; paths sorted lexically by repository-relative POSIX path.",
+    "file_count": 1054,
+    "byte_count": 18696345,
+    "jsonl_path": "manifests/file-inventory.jsonl",
+    "csv_path": "manifests/file-inventory.csv",
+    "jsonl_sha256": "b85d91f93b97537a0e3c3eab1070d6030740d75dcdc24b5fcb8ac2974df93d27",
+    "entry_content_hash": "sha256",
+    "canonicalization": "One UTF-8 JSON object per line; keys sorted; separators ',' and ':'; LF terminator; no timestamps or filesystem metadata.",
+    "reproducibility_check": "passed_byte_for_byte_second_generation"
+  },
+  "inclusion_exclusion_manifest": {
+    "path": "manifests/inclusion-exclusion-manifest.jsonl",
+    "sha256": "edf8379232661df2442c2b4d795218bdf3c65abc181a208050c5e340af952c11",
+    "entries": 1054
+  },
+  "git_validation": {
+    "is_shallow": false,
+    "git_fsck_full": "passed",
+    "worktree_clean": true,
+    "tracked_file_count": 1054,
+    "inventoried_file_count": 1054,
+    "submodule_declarations": 0,
+    "submodule_checkout_issues": 0,
+    "git_lfs_pointer_count": 0,
+    "zero_byte_worktree_files": 0,
+    "symlink_count": 0,
+    "origin_head": "origin/master"
+  },
+  "license": {
+    "spdx_id": "MIT",
+    "path": ".github/LICENSE",
+    "recorded": true
+  },
+  "safety": {
+    "source_files_modified_after_clone": false,
+    "site_generator_run": false,
+    "dependencies_installed": false,
+    "normalization_run": false,
+    "chunks_created": false,
+    "embeddings_created": false,
+    "vectors_created": false,
+    "index_created": false,
+    "other_sources_acquired": false
+  }
+}

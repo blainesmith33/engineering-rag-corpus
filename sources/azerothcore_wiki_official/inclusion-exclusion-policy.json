@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0.0",
+  "source_id": "azerothcore_wiki_official",
+  "status": "proposed_not_executed",
+  "full_file_manifest_path": "/run/media/deck/blAIne-476GB-SAM/blAIne/rag-data/engineering-rag/sources/official_docs/azerothcore_wiki_official/manifests/inclusion-exclusion-manifest.jsonl",
+  "full_file_manifest_sha256": "edf8379232661df2442c2b4d795218bdf3c65abc181a208050c5e340af952c11",
+  "counts": {
+    "include": 912,
+    "conditional": 10,
+    "exclude": 132
+  },
+  "rules": [
+    {
+      "pattern": "docs/**/*.md",
+      "action": "include",
+      "category": "primary_documentation",
+      "notes": "Attach language=en unless the path begins docs/es/; attach language=es beneath docs/es/."
+    },
+    {
+      "pattern": "_includes/**/*.html",
+      "action": "conditional",
+      "category": "site_template_include",
+      "notes": "Resolve only when referenced by an included page; do not emit standalone prose chunks by default."
+    },
+    {
+      "pattern": "_data/**/*.yml",
+      "action": "conditional",
+      "category": "site_metadata",
+      "notes": "Retain as structured metadata if referenced; do not emit standalone prose chunks by default."
+    },
+    {
+      "pattern": ".github/LICENSE",
+      "action": "exclude",
+      "category": "license",
+      "notes": "Preserve and register for compliance, but do not ingest as wiki content."
+    },
+    {
+      "pattern": "{assets,images}/**/*",
+      "action": "exclude",
+      "category": "site_asset",
+      "notes": "Retain for link resolution and future OCR decisions; exclude from this textual pilot."
+    },
+    {
+      "pattern": "{_layouts,_sass,.github,.env-files,_posts}/**/*",
+      "action": "exclude",
+      "category": "site_or_repository_support",
+      "notes": "Theme, presentation, CI, governance, and site-build dependencies are outside primary retrieval."
+    },
+    {
+      "pattern": "{_config.yml,docker-compose.yml,.gitignore,sync-wiki.sh,google*.html}",
+      "action": "exclude",
+      "category": "site_build_or_repository_configuration",
+      "notes": "Record in inventory but do not ingest."
+    }
+  ],
+  "normalization_notes_for_next_task": [
+    "Parse YAML front matter before headings.",
+    "Resolve supported Liquid includes with cycle and path guards.",
+    "Preserve tables and fenced code as atomic structures where practical.",
+    "Strip repeated Back-to navigation lines from chunk text while retaining link metadata.",
+    "Keep English and Spanish documents in separate language-aware retrieval metadata.",
+    "Treat redirects as aliases, not independent duplicate content.",
+    "Use special handling for oversized reference pages and very small index/placeholder pages."
+  ]
+}

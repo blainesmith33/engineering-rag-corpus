@@ -1,0 +1,18 @@
+# Raw or generated corpus payloads must remain outside normal Git history.
+/data/
+/**/snapshot/
+/chunks/
+/embeddings/
+/vectors/
+/indexes/
+/qdrant/
+*.npy
+*.npz
+*.faiss
+*.sqlite
+*.sqlite3
+
+# Local tooling noise.
+__pycache__/
+*.pyc
+.DS_Store

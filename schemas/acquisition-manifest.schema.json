@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://engineering-rag.local/schemas/acquisition-manifest.schema.json",
+  "title": "Engineering RAG acquisition manifest",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "schema_version",
+    "source_id",
+    "acquisition_date",
+    "acquisition_method",
+    "upstream_remote",
+    "resolved_branch",
+    "resolved_commit",
+    "snapshot_path",
+    "inventory",
+    "git_validation",
+    "license",
+    "safety"
+  ],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "source_id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9_]*$"},
+    "acquisition_date": {"type": "string", "format": "date-time"},
+    "acquisition_method": {"const": "git_clone_full"},
+    "upstream_remote": {"type": "string"},
+    "resolved_branch": {"type": "string"},
+    "resolved_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "snapshot_path": {"type": "string", "pattern": "^/"},
+    "inventory": {
+      "type": "object",
+      "required": ["file_count", "byte_count", "jsonl_sha256", "reproducibility_check"]
+    },
+    "git_validation": {
+      "type": "object",
+      "required": ["is_shallow", "git_fsck_full", "worktree_clean"]
+    },
+    "license": {"type": "object"},
+    "safety": {"type": "object"}
+  }
+}

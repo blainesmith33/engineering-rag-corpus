@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "sources": [
+    {
+      "source_id": "azerothcore_wiki_official",
+      "record": "azerothcore_wiki_official/source.json",
+      "acquisition": "azerothcore_wiki_official/acquisition.json",
+      "inclusion_policy": "azerothcore_wiki_official/inclusion-exclusion-policy.json",
+      "external_data_root": "/run/media/deck/blAIne-476GB-SAM/blAIne/rag-data/engineering-rag/sources/official_docs/azerothcore_wiki_official"
+    }
+  ]
+}
