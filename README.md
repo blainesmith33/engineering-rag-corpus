@@ -41,9 +41,9 @@ The registered source is `azerothcore_wiki_official`, pinned to upstream commit 
 
 The abstention documentation says v1 identified remaining weaknesses, including exact-identifier acceptance, table-row relation binding, command-family interpretation, and alternative-valid evidence. It calls for a new sealed holdout and v2 calibration; full-source ingestion remains blocked until the acceptance gate passes. The reported evaluation figures in the detailed remote README are historical project reports, not results independently reproduced during this review.
 
-The configured external data root—`/run/media/deck/blAIne-476GB-SAM/blAIne/rag-data/engineering-rag/`—is not present in this environment. The acquisition report and source registration refer to the pinned source snapshot and experiment outputs there. As a result, the current local code can be inspected, but this checkout cannot presently reproduce the pilot end to end from its recorded inputs. The snapshot and generated experiment artifacts should be restored or re-registered before claiming reproducibility.
+At the time of this review, the configured external data root—`/run/media/deck/blAIne-476GB-SAM/blAIne/rag-data/engineering-rag/`—was not available in the review environment. The acquisition report and source registration refer to the pinned source snapshot and experiment outputs there. Consequently, end-to-end reproduction from the recorded inputs could not be verified during this review. The snapshot and generated experiment artifacts must be restored or re-registered before claiming reproducibility.
 
-**Status:** bounded source-specific prototype with code, fixtures, and tests; historical acquisition and evaluation evidence; full-source ingestion and production promotion not authorized; end-to-end reproduction currently blocked by unavailable external inputs. This is more than a documentation-only project, but less than a complete operational engineering RAG system.
+**Status:** bounded source-specific prototype with code, fixtures, and tests; historical acquisition and evaluation evidence; full-source ingestion and production promotion not authorized; end-to-end reproducibility not verified during this review. This is more than a documentation-only project, but less than a complete operational engineering RAG system.
 
 ## Development direction and contribution context
 
@@ -55,7 +55,9 @@ Blaine’s supported contribution includes the problem framing, domain and prove
 
 ## Public repository visibility
 
-The local checkout containing this prototype is on `main` at `a69f3f70a10190ed19fb4952a799751e58c09b27`, with no upstream branch configured. The GitHub default-branch tree inspected for this review did not expose these source files and showed a substantially different README. These local implementation and README changes remain uncommitted and unpublished. An external reader of GitHub `main` therefore cannot currently inspect the implementation described above; this README describes the local checkout reviewed here, not a claim about what is already public.
+The implementation and this README are published on GitHub `main` at reconciliation commit `7043b99` (2026-11-26). The public branch includes the bounded prototype source, tests, schemas, configuration, reports, and supporting documentation described above. The previous, substantially longer root README is preserved at [`docs/history/README-main-2026-08-01.md`](docs/history/README-main-2026-08-01.md), with a provenance note alongside it.
+
+Publication makes the implementation inspectable; it does not establish that the external source snapshot and generated experiment artifacts are currently available or that end-to-end reproduction has been verified.
 
 ## Repository and data boundary
 
